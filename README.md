@@ -92,10 +92,15 @@ website is deployed using Github page:
 
 ## 👥 Authors <a name="authors"></a>
 
+👤 **Atif Zada**
+
 - GitHub: [@atifzada](https://github.com/Atifzada)
 - Twitter: [@atifzada](https://twitter.com/atifzada04)
 - LinkedIn: [@atifzada](https://www.linkedin.com/in/atif-zada-585693180/)
 
+👤 **Seyi Oyemade**
+
+- GitHub: [@seyioyemade](https://github.com/seyioyemade)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
