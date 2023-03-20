@@ -4,7 +4,6 @@ const form = document.getElementById('form');
 const bookList = document.getElementById('bookList');
 const btn = document.getElementById('btn');
 let books = JSON.parse(localStorage.getItem('Atif')) || [];
-
 function displayBooks() {
   bookList.innerHTML = '';
   books.forEach((book) => {
