@@ -52,109 +52,42 @@ Coming soon!
 Coming Soon!
 
 
+
 ## 💻 Getting Started <a name="getting-started"></a>
 
-Creating your first "Awesome Books" project
 
 To get a local copy up and running, follow these steps.
+
 
 ### Prerequisites
 
 In order to run this project you need:
-
--A Git hub account
--Git bash
--Node JS
--Visual Studio Code as your code editor
+you have to have Code editor and Github account to have the source code
 
 ### Setup
 
 Clone this repository to your desired folder:
+git clone https://github.com/Atifzada/Capstone-Project-01
 
-```sh
-  cd my-folder
-  git clone[(https://github.com/AtifZada/Awesome-Books.git)]
-```
-### Set Up Linters
-## Define Linters
-A linter is a tool to help you improve your code. You can learn more about Linters here: (source: (<https://www.testim.io/blog/what-is-a-linter-heres-a-definition-and-quick-start-guide/>)).
+### Install
 
-Advantages of Linting:
+Install this project:
 
-1. Fewer errors in production- The use of linters helps to diagnose and fix technical issues such as code smells. As a result, fewer defects make their way to production.
-2. Achieving a more readable and consistent style, through the enforcement of its rules.
-3. Having more secure and performant code.
-4. Having an objective and measurable assessment of code quality.
-5. Having fewer discussions about code style and aesthetic choices during code reviews.
 
-## Install Linters 
-You can find linters for most of the programming languages, e.g. Rubocop for Ruby or ESLint for JavaScript.
+### Usage
 
-Also, there are many ways you can integrate a linter in your workflow:
+To run the project, execute the following command:
 
--text editor plugin
--GitHub Actions
--GitHub apps
+Once you clone the project then select live server you will see portfolio website displayed on the browser
 
-## Set up Linters
-**Note:** The npm package manager is going to create a node_modules directory to install all of your dependencies. You shouldn't commit that directory. To avoid that, you can create a .gitignore file and add node_modules to it:
+### Run tests
 
-# .gitignore
-node_modules/
+To run tests, run the following command: Not Applicable
 
-## ESLint 
-Run 
-```
-npm install --save-dev eslint@7.x eslint-config-airbnb-base@14.x eslint-plugin-import@2.x babel-eslint@10.x
-```
 
-## Web Hint 
-This is a customizable linting tool that helps you improve your site's accessibility, speed, cross-browser compatibility, and more by checking your code for best practices and common errors.
+### Deployment
 
-**NOTE:** If you are using Windows, make sure you initialize npm to create `package.json` file. 
-   ```
-   npm init -y
-   ```
-
-1. Run
-   ```
-   npm install --save-dev hint@7.x
-   ```
-   *how to use npm: (https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).*
-2. Copy [.hintrc](.hintrc) to the root directory of your project.
-3. **Do not make any changes in config files - they represent style guidelines that you share with your team - which is a group of all Microverse students.**
-   - If you think that change is necessary - open a [Pull Request in this repository](../README.md#contributing) and let your code reviewer know about it.
-4. Run
-   ```
-   npx hint .
-   ```
-   [Copy contents of .eslintrc.json to the root directory of your project](https://github.com/microverseinc/linters-config/blob/master/html-css-js/.eslintrc.json)
-5. Fix validation errors.
-
-### [Stylelint](https://stylelint.io/)
-
-A mighty, modern linter that helps you avoid errors and enforce conventions in your styles.
-
-1. Run
-
-npm install --save-dev stylelint@13.x stylelint-scss@3.x stylelint-config-standard@21.x stylelint-csstree-validator@1.x
-not sure how to use npm? Read this.
-
-2. Copy .stylelintrc.json to the root directory of your project.
-
-3. **Do not make any changes in config files - they represent style guidelines that you share with your team - which is a group of all Microverse students.**
-
-If you think that change is necessary - open a Pull Request in this repository and let your code reviewer know about it.
-4. Run npx stylelint "**/*.{css,scss}" on the root of your directory of your project.
-
-5. Fix linter errors.
-
-6. **IMPORTANT NOTE:** feel free to research auto-correct options for Stylelint if you get a flood of errors but keep in mind that correcting style errors manually will help you to make a habit of writing a clean code!
-
-### Making Your HTML Using Medium-fidelity wireframes
--Make sure to use a design that is similar to the Medium-fidelity wireframes to present your website
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+website is deployed using Github page:
 
 
 ## 👥 Authors <a name="authors"></a>
@@ -169,9 +102,6 @@ If you think that change is necessary - open a Pull Request in this repository a
 👤 **Seyi Oyemade**
 
 - GitHub: (https://github.com/seyioyemade)
-
-
-## 🤝 Contributing <a name="contributing"></a>
 
 
 ## 🔭 Future Features <a name="future-features"></a>
