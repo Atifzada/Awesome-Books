@@ -7,7 +7,7 @@ class Books {
     this.bookList = document.getElementById('bookList');
     this.bookTitle = document.getElementById('titleInput');
     this.bookAuthor = document.getElementById('authorInput');
-    this.btn = document.getElementById('btn');
+    this.form = document.getElementById('form');
     this.booksArray = [];
     if (localStorage.getItem('Atif')) {
       this.booksArray = JSON.parse(localStorage.getItem('Atif'));
@@ -36,12 +36,10 @@ class Books {
       const li = document.createElement('li');
       li.innerHTML = `${book.title} by ${book.author} `;
       const remBtn = document.createElement('button');
-      const hr = document.createElement('hr');
       remBtn.innerHTML = 'Remove';
       remBtn.addEventListener('click', () => this.removeBook(book));
       li.appendChild(remBtn);
       this.bookList.appendChild(li);
-      this.bookList.appendChild(hr);
     });
   }
 
@@ -53,8 +51,7 @@ class Books {
 }
 
 const books = new Books();
-const btn = document.getElementById('btn');
-
-btn.addEventListener('click', () => {
+const form = document.getElementById('form');
+form.addEventListener('submit', () => {
   books.addBook();
 });
