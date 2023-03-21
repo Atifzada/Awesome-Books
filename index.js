@@ -34,7 +34,7 @@ class Books {
     this.bookList.innerHTML = '';
     this.booksArray.forEach((book) => {
       const li = document.createElement('li');
-      li.innerHTML = `${book.title} by ${book.author} `;
+      li.innerHTML = `"${book.title}" by ${book.author}`;
       const remBtn = document.createElement('button');
       remBtn.innerHTML = 'Remove';
       remBtn.addEventListener('click', () => this.removeBook(book));

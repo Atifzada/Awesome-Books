@@ -38,4 +38,31 @@ input {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  margin-top: 10px;
 }
+
+.btn {
+  margin-top: 10px;
+  width: 24%;
+  align-self: end;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.divider {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+hr {
+  width: 15%;
+}
+
+.title {
+  text-align: center;
+}
+
