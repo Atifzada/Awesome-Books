@@ -1,41 +1,57 @@
+/* eslint-disable import/named */
+import BookClass from './bookClass.js';
 /* eslint-disable no-use-before-define */
 /* eslint-disable no-unused-vars */
-const form = document.getElementById('form');
-const bookList = document.getElementById('bookList');
-const btn = document.getElementById('btn');
-let books = JSON.parse(localStorage.getItem('Atif')) || [];
-function displayBooks() {
-  bookList.innerHTML = '';
-  books.forEach((book) => {
-    const li = document.createElement('li');
-    li.innerHTML = `${book.title} <br> by ${book.author} <br>`;
-    const remBtn = document.createElement('button');
-    const hr = document.createElement('hr');
-    remBtn.innerHTML = 'Remove';
-    remBtn.addEventListener('click', () => removeBook(book));
-    li.appendChild(remBtn);
-    bookList.appendChild(li);
-    bookList.appendChild(hr);
-  });
-}
-function addBook(title, author) {
-  const book = { title, author };
-  books.push(book);
-  localStorage.setItem('Atif', JSON.stringify(books));
-  displayBooks();
+class Books {
+  constructor() {
+    this.bookList = document.getElementById('bookList');
+    this.bookTitle = document.getElementById('titleInput');
+    this.bookAuthor = document.getElementById('authorInput');
+    this.form = document.getElementById('form');
+    this.booksArray = [];
+    if (localStorage.getItem('Atif')) {
+      this.booksArray = JSON.parse(localStorage.getItem('Atif'));
+      this.displayBooks();
+    }
+  }
+
+  addBook = () => {
+    const title = this.bookTitle.value;
+    const author = this.bookAuthor.value;
+    const book = new BookClass(title, author);
+    this.booksArray.push(book);
+    this.displayBooks();
+    this.saveToLocalStorage();
+    this.bookAuthor.value = '';
+    this.bookTitle.value = '';
+  }
+
+  saveToLocalStorage = () => {
+    localStorage.setItem('Atif', JSON.stringify(this.booksArray));
+  };
+
+  displayBooks = () => {
+    this.bookList.innerHTML = '';
+    this.booksArray.forEach((book) => {
+      const li = document.createElement('li');
+      li.innerHTML = `"${book.title}" by ${book.author}`;
+      const remBtn = document.createElement('button');
+      remBtn.innerHTML = 'Remove';
+      remBtn.addEventListener('click', () => this.removeBook(book));
+      li.appendChild(remBtn);
+      this.bookList.appendChild(li);
+    });
+  }
+
+  removeBook = (book) => {
+    this.booksArray = this.booksArray.filter((a) => a !== book);
+    this.saveToLocalStorage();
+    this.displayBooks();
+  };
 }
 
-function removeBook(book) {
-  books = books.filter((a) => a !== book);
-  localStorage.setItem('Atif', JSON.stringify(books));
-  displayBooks();
-}
-displayBooks();
-form.addEventListener('submit', (event) => {
-  event.preventDefault();
-  const titleInput = document.getElementById('titleInput');
-  const authorInput = document.getElementById('authorInput');
-  addBook(titleInput.value, authorInput.value);
-  titleInput.value = '';
-  authorInput.value = '';
+const books = new Books();
+const form = document.getElementById('form');
+form.addEventListener('submit', () => {
+  books.addBook();
 });
