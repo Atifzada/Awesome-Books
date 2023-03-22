@@ -1,7 +1,5 @@
-/* eslint-disable import/named */
 import BookClass from './bookClass.js';
-/* eslint-disable no-use-before-define */
-/* eslint-disable no-unused-vars */
+
 class Books {
   constructor() {
     this.bookList = document.getElementById('bookList');
