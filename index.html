@@ -8,23 +8,52 @@
     <title>Awesome-Books </title>
 </head>
 <body>
-    <div class="record">
-        <h1 class="mainTitle">All Awesome Books</h1>
-        <ul id="bookList" class="bookList"> 
+    <nav class="navbar">
+        <p>Awesome Books</p>
+        <ul class="navbarItems">
+            <li><a href="#" id="booksLink" class="active">Books</a></li>
+            <li><a href="#" id="addBookLink">Add Book</a></li>
+            <li><a href="#" id="contactLink">Contact</a></li>
         </ul>
-    </div>
-    <div class="divider"><hr></div>
-    <div class="addition">
-    <div class="empty"></div>
-    <form id="form" class="form">
-        <label for="text" class="title">Add a new Book</label>
-        <div class="inputs">
-            <input type="text" id="titleInput" class="titleInput" required placeholder="Title">           <!-- <label for="text" >Author's_Name:</label> -->
-            <input type="text" id="authorInput" class="authorInput" required placeholder="Author">
-        </div>
-        <button id="btn" class="btn" type="submit">Add</button>
+    </nav>
 
+    <div id="content">
+        <div id="books" class="content-section active">
+            <div class="record">
+                <h1 class="mainTitle">All Awesome Books</h1>
+                <ul id="bookList" class="bookList"> 
+                </ul>
+            </div>
+        </div>
+        
+        <div id="addBook" class="content-section">
+            <div class="addition">
+                <div class="empty"></div>
+                <form id="form" class="form">
+                    <label for="text" class="title">Add a new Book</label>
+                    <div class="inputs">
+                        <input type="text" id="titleInput" class="titleInput" required placeholder="Title">
+                        <input type="text" id="authorInput" class="authorInput" required placeholder="Author">
+                    </div>
+                    <button id="btn" class="btn" type="submit">Add</button>
+                </form>
+            </div>
+        </div>
+        <div id="contact" class="content-section">
+            <div class="contactInner">
+            <h1>Contact Information</h1>
+            <p>Do you have questions or you just want to say "Hello"?<br>
+                you can reach out to us
+            </p>
+            <div class="contactInfo">
+            <p><strong>Email</strong>: awesomebooks@example.com</p>
+            <p><strong>Our Phone</strong>: +923119626239</p>
+            <p><strong>Our address</strong>: Street#4 Dhoke kala khan, Shamsabad, Rawalpindi </p>
+            </div>
+    </div>
 </div>
+    </div>
+
     <script type="module" src="index.js"></script>
 </body>
 </html>

@@ -11,6 +11,9 @@ input {
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 80vh;
+  justify-content: center;
+  gap: 50px;
 }
 
 .addition {
@@ -20,7 +23,7 @@ input {
 }
 
 .bookList {
-  width: 40%;
+  width: 75%;
   border: 2px solid black;
 }
 
@@ -64,4 +67,53 @@ hr {
 
 .title {
   text-align: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 30px;
+  border: 2px solid black;
+  padding: 15px 20px;
+}
+
+ul li {
+  list-style: none;
+}
+
+li {
+  border-right: 1.5px solid black;
+  padding-right: 10px;
+  line-height: 2;
+}
+
+li:last-child {
+  border-right: none; 
+}
+
+a {
+  text-decoration: none;
+}
+.navbarItems {
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.content-section {
+  display: none;
+}
+
+.content-section.active {
+  display: block;
+}
+
+.contactInner {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
 }
