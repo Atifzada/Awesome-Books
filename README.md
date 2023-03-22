@@ -41,6 +41,7 @@
 - **[Medium-fidelity Wireframes]**
 - **[Desktop Version]**
 - **[Dynamic Design]**
+- **[SPA design]**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -87,7 +88,7 @@ To run tests, run the following command: Not Applicable
 
 ### Deployment
 
-website is deployed using Github page:
+website can be deployed using Github pages:
 
 
 ## 👥 Authors <a name="authors"></a>

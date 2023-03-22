@@ -14,12 +14,11 @@ class Books {
       this.displayBooks();
     }
     this.bookLink = document.getElementById('booksLink');
-    this.addBookLink= document.getElementById('addBookLink');
+    this.addBookLink = document.getElementById('addBookLink');
     this.contactLink = document.getElementById('contactLink');
     this.booksSection = document.getElementById('books');
     this.addBookSection = document.getElementById('addBook');
     this.contactSection = document.getElementById('contact');
-
 
     this.bookLink.addEventListener('click', () => this.showBooksSection());
     this.addBookLink.addEventListener('click', () => this.showAddBookSection());
@@ -86,7 +85,6 @@ class Books {
     this.addBookSection.classList.remove('active');
     this.contactSection.classList.add('active');
   }
-
 }
 
 const books = new Books();
