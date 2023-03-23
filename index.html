@@ -8,23 +8,58 @@
     <title>Awesome-Books </title>
 </head>
 <body>
-    <div class="record">
-        <h1 class="mainTitle">All Awesome Books</h1>
-        <ul id="bookList" class="bookList"> 
+    <nav class="navbar">
+        <p>Awesome Books</p>
+        <ul class="navbarItems">
+            <li><a href="#" id="booksLink" class="active">Books</a></li>
+            <li><a href="#" id="addBookLink">Add Book</a></li>
+            <li><a href="#" id="contactLink">Contact</a></li>
         </ul>
-    </div>
-    <div class="divider"><hr></div>
-    <div class="addition">
-    <div class="empty"></div>
-    <form id="form" class="form">
-        <label for="text" class="title">Add a new Book</label>
-        <div class="inputs">
-            <input type="text" id="titleInput" class="titleInput" required placeholder="Title">           <!-- <label for="text" >Author's_Name:</label> -->
-            <input type="text" id="authorInput" class="authorInput" required placeholder="Author">
+    </nav>
+    <div class="date"><p>March 22nd, 2023, 2:30pm</p></div>
+    <div id="content">
+        <div id="books" class="content-section active">
+            <div class="record">
+                <h1 class="mainTitle">All Awesome Books</h1>
+                <ul id="bookList" class="bookList"> 
+                </ul>
+            </div>
         </div>
-        <button id="btn" class="btn" type="submit">Add</button>
-
+        
+        <div id="addBook" class="content-section">
+            <div class="addition">
+                <div class="empty"></div>
+                <form id="form" class="form">
+                    <h1 class="title">Add a new Book</h1>
+                    <div class="inputs">
+                        <input type="text" id="titleInput" class="titleInput" required placeholder="Title">
+                        <input type="text" id="authorInput" class="authorInput" required placeholder="Author">
+                    </div>
+                    <button id="btn" class="btn" type="submit">Add</button>
+                </form>
+            </div>
+        </div>
+        <div id="contact" class="content-section">
+            <div class="contactInner">
+            <h1>Contact Information</h1>
+            <div>
+                <p>Do you have any questions or you just want to say "Hello"?</p>
+                <p>You can reach out to us!</p>
+                <ul>
+                    <li>Our email: mail@mail.com</li>
+                    <li>Our phone number: 00000000000000</li>
+                    <li>Our address: Street# 4, Dhoke Kala Khan Rawalpindi, Pakistan </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>
+    </div>
+
+    <footer>
+        <p>Copyright</p>
+    </footer>
+
     <script type="module" src="index.js"></script>
 </body>
 </html>

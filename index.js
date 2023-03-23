@@ -1,7 +1,5 @@
-/* eslint-disable import/named */
 import BookClass from './bookClass.js';
-/* eslint-disable no-use-before-define */
-/* eslint-disable no-unused-vars */
+
 class Books {
   constructor() {
     this.bookList = document.getElementById('bookList');
@@ -13,6 +11,16 @@ class Books {
       this.booksArray = JSON.parse(localStorage.getItem('Atif'));
       this.displayBooks();
     }
+    this.bookLink = document.getElementById('booksLink');
+    this.addBookLink = document.getElementById('addBookLink');
+    this.contactLink = document.getElementById('contactLink');
+    this.booksSection = document.getElementById('books');
+    this.addBookSection = document.getElementById('addBook');
+    this.contactSection = document.getElementById('contact');
+
+    this.bookLink.addEventListener('click', () => this.showBooksSection());
+    this.addBookLink.addEventListener('click', () => this.showAddBookSection());
+    this.contactLink.addEventListener('click', () => this.showContactSection());
   }
 
   addBook = () => {
@@ -48,6 +56,33 @@ class Books {
     this.saveToLocalStorage();
     this.displayBooks();
   };
+
+  showBooksSection() {
+    this.bookLink.classList.add('active');
+    this.addBookLink.classList.remove('active');
+    this.contactLink.classList.remove('active');
+    this.booksSection.classList.add('active');
+    this.addBookSection.classList.remove('active');
+    this.contactSection.classList.remove('active');
+  }
+
+  showAddBookSection() {
+    this.bookLink.classList.remove('active');
+    this.addBookLink.classList.add('active');
+    this.contactLink.classList.remove('active');
+    this.booksSection.classList.remove('active');
+    this.addBookSection.classList.add('active');
+    this.contactSection.classList.remove('active');
+  }
+
+  showContactSection() {
+    this.bookLink.classList.remove('active');
+    this.addBookLink.classList.remove('active');
+    this.contactLink.classList.add('active');
+    this.booksSection.classList.remove('active');
+    this.addBookSection.classList.remove('active');
+    this.contactSection.classList.add('active');
+  }
 }
 
 const books = new Books();
